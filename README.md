@@ -1,1 +1,1 @@
-# flask-boilerplate
+# Codeflix Catalog Api

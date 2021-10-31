@@ -1,0 +1,4 @@
+from .cast_member_repository import CastMemberRepository
+from .category_repository import CategoryRepository
+from .genre_repository import GenreRepository
+from .video_repository import VideoRepository

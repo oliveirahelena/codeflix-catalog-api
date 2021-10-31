@@ -9,7 +9,6 @@ class RepositoryInterface(metaclass=ABCMeta):
     """An interface for a generic repository with CRUD operations"""
 
     @abstractmethod
-    @classmethod
     def list(self, **kwargs) -> Union[Set[Entity], None]:
         raise NotImplementedError
 
@@ -28,7 +27,3 @@ class RepositoryInterface(metaclass=ABCMeta):
     @abstractmethod
     def delete(self, entity_id: uuid.UUID) -> bool:
         raise NotImplementedError
-
-    @staticmethod
-    def next_id() -> uuid.UUID:
-        return uuid.uuid4()

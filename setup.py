@@ -8,11 +8,11 @@ readme = os.path.join(os.path.dirname(__file__), "README.md")
 long_description = open(readme).read()
 
 SETUP_ARGS = dict(
-    name="<your project>",
+    name="codeflix-catalog-api",
     version=version,
     description=("A demo implementation of a clean architecture in Python."),
     long_description=long_description,
-    url="https://github.com/<your login>/<your project>",
+    url="https://github.com/oliveirahelena/codeflix-catalog-api",
     author="<AUTHOR>",
     author_email="<EMAIL>",
     license="MIT",
@@ -28,10 +28,7 @@ SETUP_ARGS = dict(
     py_modules=[
         "src",
     ],
-    install_requires=[
-        "sqlalchemy",
-        "flask",
-    ],
+    install_requires=["sqlalchemy", "flask", "pydantic" "flask-cors"],
 )
 
 if __name__ == "__main__":

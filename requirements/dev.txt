@@ -1,6 +1,5 @@
 -r test.txt
 
-pylint
 mypy
 isort
 flake8

@@ -16,7 +16,6 @@
     ],
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
-    "python.linting.pylintEnabled": true,
     "files.exclude": {
         "/*.pyc": {
             "when": "$(basename).py"
