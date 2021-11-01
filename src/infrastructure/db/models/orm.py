@@ -1,8 +1,8 @@
 import logging
 from datetime import datetime
 
-from sqlalchemy import (Boolean, Column, DateTime, Enum, ForeignKey, Integer,
-                        MetaData, String, Table)
+from sqlalchemy import (Boolean, Column, DateTime, Enum, Float, ForeignKey,
+                        Integer, MetaData, String, Table)
 from sqlalchemy.orm import mapper, relationship
 
 from src.domain.entities import (CastMember, CastMemberTypes, Category, Genre,
@@ -55,7 +55,7 @@ videos = Table(
     Column("year_launched", Integer()),
     Column("opened", Boolean()),
     Column("rating", String(10)),
-    Column("duration", Integer()),
+    Column("duration", Float()),
     Column("thumb_file", String(255)),
     Column("banner_file", String(255)),
     Column("trailer_file", String(255)),

@@ -1,19 +1,24 @@
+from dataclasses import dataclass, field
+from typing import Optional
+
 from .entity import Entity
 
 
+@dataclass
 class Video(Entity):
     """Video Entity"""
 
-    title: str
-    description: str
-    year_launched: int
-    opened: bool
-    rating: str
-    duration: int
-    thumb_file: str
-    banner_file: str
-    trailer_file: str
-    video_file: str
+    title: Optional[str] = None
+    description: Optional[str] = None
+    year_launched: Optional[int] = None
+    opened: Optional[bool] = field(default=True, init=True)
+    rating: Optional[str] = None
+    duration: Optional[float] = None
+    thumb_file: Optional[str] = None
+    banner_file: Optional[str] = None
+    trailer_file: Optional[str] = None
+    video_file: Optional[str] = None
 
-    class Config:
-        orm_mode = True
+    def __post_init__(self):
+        if self.title == "" or self.title is None:
+            raise TypeError("__init__ missing 1 required argument: 'title'")

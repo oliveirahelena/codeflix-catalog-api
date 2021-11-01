@@ -9,8 +9,8 @@ class Entity:
     """Main class to Entities"""
 
     id: Optional[uuid.UUID] = uuid.uuid4()
-    created_at: Optional[datetime] = datetime.utcnow()
-    updated_at: Optional[datetime] = datetime.utcnow()
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
     deleted_at: Optional[datetime] = None
 
     @classmethod
