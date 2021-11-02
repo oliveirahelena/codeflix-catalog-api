@@ -1,1 +1,1 @@
-# Codeflix Catalog Api
+# Codeflix Video Api
